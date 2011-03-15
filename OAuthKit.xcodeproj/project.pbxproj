@@ -1,0 +1,384 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBF0CBBD1312E8B7004F85FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF0CBBC1312E8B7004F85FE /* Cocoa.framework */; };
+		BBF0CBC71312E8B7004F85FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBF0CBC51312E8B7004F85FE /* InfoPlist.strings */; };
+		C7692578132FF036005F6AC3 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692560132FF034005F6AC3 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C7692579132FF036005F6AC3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692561132FF034005F6AC3 /* NSData+Base64.m */; };
+		C769257A132FF036005F6AC3 /* NSDictionary+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692562132FF034005F6AC3 /* NSDictionary+OAuthAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C769257B132FF036005F6AC3 /* NSDictionary+OAuthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692563132FF034005F6AC3 /* NSDictionary+OAuthAdditions.m */; };
+		C769257C132FF036005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692564132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C769257D132FF036005F6AC3 /* NSMutableURLRequest+OAuthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692565132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.m */; };
+		C769257E132FF036005F6AC3 /* NSString+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692566132FF034005F6AC3 /* NSString+OAuthAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C769257F132FF036005F6AC3 /* NSString+OAuthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692567132FF034005F6AC3 /* NSString+OAuthAdditions.m */; };
+		C7692580132FF036005F6AC3 /* NSURL+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692568132FF034005F6AC3 /* NSURL+OAuthAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C7692581132FF036005F6AC3 /* NSURL+OAuthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692569132FF034005F6AC3 /* NSURL+OAuthAdditions.m */; };
+		C7692582132FF036005F6AC3 /* OAuthKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C769256A132FF034005F6AC3 /* OAuthKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7692583132FF036005F6AC3 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = C769256B132FF034005F6AC3 /* OAuthConsumer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7692584132FF036005F6AC3 /* OAuthConsumer.m in Sources */ = {isa = PBXBuildFile; fileRef = C769256C132FF034005F6AC3 /* OAuthConsumer.m */; };
+		C7692585132FF036005F6AC3 /* OAuthParameter.h in Headers */ = {isa = PBXBuildFile; fileRef = C769256D132FF034005F6AC3 /* OAuthParameter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7692586132FF036005F6AC3 /* OAuthParameter.m in Sources */ = {isa = PBXBuildFile; fileRef = C769256E132FF034005F6AC3 /* OAuthParameter.m */; };
+		C7692587132FF036005F6AC3 /* OAuthRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C769256F132FF034005F6AC3 /* OAuthRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C7692588132FF036005F6AC3 /* OAuthRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692570132FF034005F6AC3 /* OAuthRequest.m */; };
+		C7692589132FF036005F6AC3 /* OAuthRequestFetcher.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692571132FF035005F6AC3 /* OAuthRequestFetcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C769258A132FF036005F6AC3 /* OAuthRequestFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692572132FF035005F6AC3 /* OAuthRequestFetcher.m */; };
+		C769258B132FF036005F6AC3 /* OAuthSignerHMAC.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692573132FF035005F6AC3 /* OAuthSignerHMAC.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C769258C132FF036005F6AC3 /* OAuthSignerHMAC.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692574132FF035005F6AC3 /* OAuthSignerHMAC.m */; };
+		C769258D132FF036005F6AC3 /* OAuthSignerProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692575132FF035005F6AC3 /* OAuthSignerProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C769258E132FF036005F6AC3 /* OAuthToken.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692576132FF035005F6AC3 /* OAuthToken.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C769258F132FF036005F6AC3 /* OAuthToken.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692577132FF035005F6AC3 /* OAuthToken.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BBF0CBB91312E8B7004F85FE /* OAuthKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OAuthKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBF0CBBC1312E8B7004F85FE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BBF0CBBF1312E8B7004F85FE /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BBF0CBC01312E8B7004F85FE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BBF0CBC11312E8B7004F85FE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BBF0CBC41312E8B7004F85FE /* OAuthKit-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "OAuthKit-Info.plist"; path = "../OAuthKit-Info.plist"; sourceTree = "<group>"; };
+		BBF0CBC61312E8B7004F85FE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BBF0CBC81312E8B7004F85FE /* OAuthKit-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "OAuthKit-Prefix.pch"; path = "../OAuthKit-Prefix.pch"; sourceTree = "<group>"; };
+		C7692560132FF034005F6AC3 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSData+Base64.h"; path = "Source/NSData+Base64.h"; sourceTree = "<group>"; };
+		C7692561132FF034005F6AC3 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSData+Base64.m"; path = "Source/NSData+Base64.m"; sourceTree = "<group>"; };
+		C7692562132FF034005F6AC3 /* NSDictionary+OAuthAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+OAuthAdditions.h"; path = "Source/NSDictionary+OAuthAdditions.h"; sourceTree = "<group>"; };
+		C7692563132FF034005F6AC3 /* NSDictionary+OAuthAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+OAuthAdditions.m"; path = "Source/NSDictionary+OAuthAdditions.m"; sourceTree = "<group>"; };
+		C7692564132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableURLRequest+OAuthAdditions.h"; path = "Source/NSMutableURLRequest+OAuthAdditions.h"; sourceTree = "<group>"; };
+		C7692565132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableURLRequest+OAuthAdditions.m"; path = "Source/NSMutableURLRequest+OAuthAdditions.m"; sourceTree = "<group>"; };
+		C7692566132FF034005F6AC3 /* NSString+OAuthAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+OAuthAdditions.h"; path = "Source/NSString+OAuthAdditions.h"; sourceTree = "<group>"; };
+		C7692567132FF034005F6AC3 /* NSString+OAuthAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+OAuthAdditions.m"; path = "Source/NSString+OAuthAdditions.m"; sourceTree = "<group>"; };
+		C7692568132FF034005F6AC3 /* NSURL+OAuthAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+OAuthAdditions.h"; path = "Source/NSURL+OAuthAdditions.h"; sourceTree = "<group>"; };
+		C7692569132FF034005F6AC3 /* NSURL+OAuthAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+OAuthAdditions.m"; path = "Source/NSURL+OAuthAdditions.m"; sourceTree = "<group>"; };
+		C769256A132FF034005F6AC3 /* OAuthKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthKit.h; sourceTree = "<group>"; };
+		C769256B132FF034005F6AC3 /* OAuthConsumer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthConsumer.h; sourceTree = "<group>"; };
+		C769256C132FF034005F6AC3 /* OAuthConsumer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthConsumer.m; sourceTree = "<group>"; };
+		C769256D132FF034005F6AC3 /* OAuthParameter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthParameter.h; sourceTree = "<group>"; };
+		C769256E132FF034005F6AC3 /* OAuthParameter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthParameter.m; sourceTree = "<group>"; };
+		C769256F132FF034005F6AC3 /* OAuthRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthRequest.h; sourceTree = "<group>"; };
+		C7692570132FF034005F6AC3 /* OAuthRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthRequest.m; sourceTree = "<group>"; };
+		C7692571132FF035005F6AC3 /* OAuthRequestFetcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthRequestFetcher.h; sourceTree = "<group>"; };
+		C7692572132FF035005F6AC3 /* OAuthRequestFetcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthRequestFetcher.m; sourceTree = "<group>"; };
+		C7692573132FF035005F6AC3 /* OAuthSignerHMAC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSignerHMAC.h; sourceTree = "<group>"; };
+		C7692574132FF035005F6AC3 /* OAuthSignerHMAC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthSignerHMAC.m; sourceTree = "<group>"; };
+		C7692575132FF035005F6AC3 /* OAuthSignerProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthSignerProtocol.h; sourceTree = "<group>"; };
+		C7692576132FF035005F6AC3 /* OAuthToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAuthToken.h; sourceTree = "<group>"; };
+		C7692577132FF035005F6AC3 /* OAuthToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAuthToken.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBF0CBB51312E8B7004F85FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF0CBBD1312E8B7004F85FE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBF0CBAD1312E8B7004F85FE = {
+			isa = PBXGroup;
+			children = (
+				BBF0CBC21312E8B7004F85FE /* Source */,
+				BBF0CBBB1312E8B7004F85FE /* Frameworks */,
+				BBF0CBBA1312E8B7004F85FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBF0CBBA1312E8B7004F85FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0CBB91312E8B7004F85FE /* OAuthKit.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBF0CBBB1312E8B7004F85FE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0CBBC1312E8B7004F85FE /* Cocoa.framework */,
+				BBF0CBBE1312E8B7004F85FE /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BBF0CBBE1312E8B7004F85FE /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0CBBF1312E8B7004F85FE /* AppKit.framework */,
+				BBF0CBC01312E8B7004F85FE /* CoreData.framework */,
+				BBF0CBC11312E8B7004F85FE /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BBF0CBC21312E8B7004F85FE /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				C7692591132FF051005F6AC3 /* Protocols */,
+				C7692590132FF03F005F6AC3 /* Categories */,
+				C769256A132FF034005F6AC3 /* OAuthKit.h */,
+				C769256B132FF034005F6AC3 /* OAuthConsumer.h */,
+				C769256C132FF034005F6AC3 /* OAuthConsumer.m */,
+				C769256D132FF034005F6AC3 /* OAuthParameter.h */,
+				C769256E132FF034005F6AC3 /* OAuthParameter.m */,
+				C769256F132FF034005F6AC3 /* OAuthRequest.h */,
+				C7692570132FF034005F6AC3 /* OAuthRequest.m */,
+				C7692571132FF035005F6AC3 /* OAuthRequestFetcher.h */,
+				C7692572132FF035005F6AC3 /* OAuthRequestFetcher.m */,
+				C7692573132FF035005F6AC3 /* OAuthSignerHMAC.h */,
+				C7692574132FF035005F6AC3 /* OAuthSignerHMAC.m */,
+				C7692576132FF035005F6AC3 /* OAuthToken.h */,
+				C7692577132FF035005F6AC3 /* OAuthToken.m */,
+				BBF0CBC31312E8B7004F85FE /* Supporting Files */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		BBF0CBC31312E8B7004F85FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BBF0CBC41312E8B7004F85FE /* OAuthKit-Info.plist */,
+				BBF0CBC51312E8B7004F85FE /* InfoPlist.strings */,
+				BBF0CBC81312E8B7004F85FE /* OAuthKit-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7692590132FF03F005F6AC3 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C7692560132FF034005F6AC3 /* NSData+Base64.h */,
+				C7692561132FF034005F6AC3 /* NSData+Base64.m */,
+				C7692562132FF034005F6AC3 /* NSDictionary+OAuthAdditions.h */,
+				C7692563132FF034005F6AC3 /* NSDictionary+OAuthAdditions.m */,
+				C7692564132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h */,
+				C7692565132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.m */,
+				C7692566132FF034005F6AC3 /* NSString+OAuthAdditions.h */,
+				C7692567132FF034005F6AC3 /* NSString+OAuthAdditions.m */,
+				C7692568132FF034005F6AC3 /* NSURL+OAuthAdditions.h */,
+				C7692569132FF034005F6AC3 /* NSURL+OAuthAdditions.m */,
+			);
+			name = Categories;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C7692591132FF051005F6AC3 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C7692575132FF035005F6AC3 /* OAuthSignerProtocol.h */,
+			);
+			name = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		BBF0CBB61312E8B7004F85FE /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7692582132FF036005F6AC3 /* OAuthKit.h in Headers */,
+				C7692583132FF036005F6AC3 /* OAuthConsumer.h in Headers */,
+				C7692585132FF036005F6AC3 /* OAuthParameter.h in Headers */,
+				C7692587132FF036005F6AC3 /* OAuthRequest.h in Headers */,
+				C7692589132FF036005F6AC3 /* OAuthRequestFetcher.h in Headers */,
+				C769258B132FF036005F6AC3 /* OAuthSignerHMAC.h in Headers */,
+				C769258D132FF036005F6AC3 /* OAuthSignerProtocol.h in Headers */,
+				C769258E132FF036005F6AC3 /* OAuthToken.h in Headers */,
+				C7692578132FF036005F6AC3 /* NSData+Base64.h in Headers */,
+				C769257A132FF036005F6AC3 /* NSDictionary+OAuthAdditions.h in Headers */,
+				C769257C132FF036005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h in Headers */,
+				C769257E132FF036005F6AC3 /* NSString+OAuthAdditions.h in Headers */,
+				C7692580132FF036005F6AC3 /* NSURL+OAuthAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BBF0CBB81312E8B7004F85FE /* OAuthKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBF0CBCB1312E8B7004F85FE /* Build configuration list for PBXNativeTarget "OAuthKit" */;
+			buildPhases = (
+				BBF0CBB41312E8B7004F85FE /* Sources */,
+				BBF0CBB51312E8B7004F85FE /* Frameworks */,
+				BBF0CBB61312E8B7004F85FE /* Headers */,
+				BBF0CBB71312E8B7004F85FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OAuthKit;
+			productName = FMOAuthKit;
+			productReference = BBF0CBB91312E8B7004F85FE /* OAuthKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBF0CBAF1312E8B7004F85FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Felix Morgner";
+			};
+			buildConfigurationList = BBF0CBB21312E8B7004F85FE /* Build configuration list for PBXProject "OAuthKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BBF0CBAD1312E8B7004F85FE;
+			productRefGroup = BBF0CBBA1312E8B7004F85FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBF0CBB81312E8B7004F85FE /* OAuthKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBF0CBB71312E8B7004F85FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBF0CBC71312E8B7004F85FE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBF0CBB41312E8B7004F85FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7692579132FF036005F6AC3 /* NSData+Base64.m in Sources */,
+				C769257B132FF036005F6AC3 /* NSDictionary+OAuthAdditions.m in Sources */,
+				C769257D132FF036005F6AC3 /* NSMutableURLRequest+OAuthAdditions.m in Sources */,
+				C769257F132FF036005F6AC3 /* NSString+OAuthAdditions.m in Sources */,
+				C7692581132FF036005F6AC3 /* NSURL+OAuthAdditions.m in Sources */,
+				C7692584132FF036005F6AC3 /* OAuthConsumer.m in Sources */,
+				C7692586132FF036005F6AC3 /* OAuthParameter.m in Sources */,
+				C7692588132FF036005F6AC3 /* OAuthRequest.m in Sources */,
+				C769258A132FF036005F6AC3 /* OAuthRequestFetcher.m in Sources */,
+				C769258C132FF036005F6AC3 /* OAuthSignerHMAC.m in Sources */,
+				C769258F132FF036005F6AC3 /* OAuthToken.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BBF0CBC51312E8B7004F85FE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBF0CBC61312E8B7004F85FE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBF0CBC91312E8B7004F85FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BBF0CBCA1312E8B7004F85FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BBF0CBCC1312E8B7004F85FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuthKit-Prefix.pch";
+				INFOPLIST_FILE = "OAuthKit-Info.plist";
+				PRODUCT_NAME = OAuthKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		BBF0CBCD1312E8B7004F85FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OAuthKit-Prefix.pch";
+				INFOPLIST_FILE = "OAuthKit-Info.plist";
+				PRODUCT_NAME = OAuthKit;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBF0CBB21312E8B7004F85FE /* Build configuration list for PBXProject "OAuthKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF0CBC91312E8B7004F85FE /* Debug */,
+				BBF0CBCA1312E8B7004F85FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBF0CBCB1312E8B7004F85FE /* Build configuration list for PBXNativeTarget "OAuthKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBF0CBCC1312E8B7004F85FE /* Debug */,
+				BBF0CBCD1312E8B7004F85FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BBF0CBAF1312E8B7004F85FE /* Project object */;
+}
