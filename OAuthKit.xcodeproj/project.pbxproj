@@ -334,8 +334,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAuthKit-Prefix.pch";
 				INFOPLIST_FILE = "OAuthKit-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				LD_DYLIB_INSTALL_NAME = "";
+				INSTALL_PATH = "@rpath";
+				LD_DYLIB_INSTALL_NAME = "@rpath/OAuthKit.framework/Versions/A/OAuthKit";
 				PRODUCT_NAME = OAuthKit;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -354,8 +354,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OAuthKit-Prefix.pch";
 				INFOPLIST_FILE = "OAuthKit-Info.plist";
-				INSTALL_PATH = "@executable_path/../Frameworks";
-				LD_DYLIB_INSTALL_NAME = "";
+				INSTALL_PATH = "@rpath";
+				LD_DYLIB_INSTALL_NAME = "@rpath/OAuthKit.framework/Versions/A/OAuthKit";
 				PRODUCT_NAME = OAuthKit;
 				WRAPPER_EXTENSION = framework;
 			};
