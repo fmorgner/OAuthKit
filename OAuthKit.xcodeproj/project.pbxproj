@@ -9,15 +9,15 @@
 /* Begin PBXBuildFile section */
 		BBF0CBBD1312E8B7004F85FE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF0CBBC1312E8B7004F85FE /* Cocoa.framework */; };
 		BBF0CBC71312E8B7004F85FE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BBF0CBC51312E8B7004F85FE /* InfoPlist.strings */; };
-		C7692578132FF036005F6AC3 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692560132FF034005F6AC3 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C7692578132FF036005F6AC3 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692560132FF034005F6AC3 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7692579132FF036005F6AC3 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692561132FF034005F6AC3 /* NSData+Base64.m */; };
-		C769257A132FF036005F6AC3 /* NSDictionary+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692562132FF034005F6AC3 /* NSDictionary+OAuthAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C769257A132FF036005F6AC3 /* NSDictionary+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692562132FF034005F6AC3 /* NSDictionary+OAuthAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C769257B132FF036005F6AC3 /* NSDictionary+OAuthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692563132FF034005F6AC3 /* NSDictionary+OAuthAdditions.m */; };
-		C769257C132FF036005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692564132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C769257C132FF036005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692564132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C769257D132FF036005F6AC3 /* NSMutableURLRequest+OAuthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692565132FF034005F6AC3 /* NSMutableURLRequest+OAuthAdditions.m */; };
-		C769257E132FF036005F6AC3 /* NSString+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692566132FF034005F6AC3 /* NSString+OAuthAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C769257E132FF036005F6AC3 /* NSString+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692566132FF034005F6AC3 /* NSString+OAuthAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C769257F132FF036005F6AC3 /* NSString+OAuthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692567132FF034005F6AC3 /* NSString+OAuthAdditions.m */; };
-		C7692580132FF036005F6AC3 /* NSURL+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692568132FF034005F6AC3 /* NSURL+OAuthAdditions.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C7692580132FF036005F6AC3 /* NSURL+OAuthAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = C7692568132FF034005F6AC3 /* NSURL+OAuthAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7692581132FF036005F6AC3 /* NSURL+OAuthAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = C7692569132FF034005F6AC3 /* NSURL+OAuthAdditions.m */; };
 		C7692582132FF036005F6AC3 /* OAuthKit.h in Headers */ = {isa = PBXBuildFile; fileRef = C769256A132FF034005F6AC3 /* OAuthKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7692583132FF036005F6AC3 /* OAuthConsumer.h in Headers */ = {isa = PBXBuildFile; fileRef = C769256B132FF034005F6AC3 /* OAuthConsumer.h */; settings = {ATTRIBUTES = (Public, ); }; };
