@@ -121,7 +121,7 @@
 		[self setNonce:[self generateNonce]];
 		[self setTimestamp:[self generateTimestamp]];
 		
-		self.oauthParameters = [[NSMutableArray alloc] init];
+		self.oauthParameters = [NSMutableArray array];
     }
 
 	return self;
