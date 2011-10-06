@@ -227,6 +227,7 @@
 		BBF0CBAF1312E8B7004F85FE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = "Felix Morgner";
 			};
 			buildConfigurationList = BBF0CBB21312E8B7004F85FE /* Build configuration list for PBXProject "OAuthKit" */;
