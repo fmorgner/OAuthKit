@@ -10,8 +10,6 @@
 #import "OAuthToken.h"
 
 @interface OAuthConsumer : OAuthToken
-	{
-	}
 
 + (OAuthConsumer*)consumerWithKey:(NSString*)theKey secret:(NSString*)theSecret authorized:(BOOL)isAuthorized;
 + (OAuthConsumer*)consumer;

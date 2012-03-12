@@ -12,8 +12,5 @@
 #import "OAuthSignerProtocol.h"
 
 @interface OAuthSignerHMAC : NSObject <OAuthSigner>
-	{
-
-	}
 
 @end

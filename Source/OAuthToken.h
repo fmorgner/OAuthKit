@@ -10,11 +10,6 @@
 
 
 @interface OAuthToken : NSObject
-	{
-	NSString* key;
-	NSString* secret;
-	BOOL authorized;
-	}
 
 - (id)initWithKey:(NSString*)theKey secret:(NSString*)theSecret authorized:(BOOL)isAuthorized;
 

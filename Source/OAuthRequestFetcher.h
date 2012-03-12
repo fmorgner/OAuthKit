@@ -10,12 +10,6 @@
 
 
 @interface OAuthRequestFetcher : NSObject
-	{
-	NSURLRequest* request;
-	NSURLConnection* connection;
-	NSMutableData* receivedData;
-	void (^completionHandler)(id);
-	}
 
 - (void)fetchRequest:(NSURLRequest*)aRequest completionHandler:(void (^)(id fetchResult))block;
 

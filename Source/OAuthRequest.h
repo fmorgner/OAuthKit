@@ -13,16 +13,6 @@
 #import "OAuthSignerProtocol.h"
 
 @interface OAuthRequest : NSMutableURLRequest
-	{
-	Class signerClass;
-	OAuthConsumer* consumer;
-	OAuthToken*	token;
-	NSString* realm;
-	NSString* signature;
-	NSString* nonce;
-	NSString* timestamp;
-	NSMutableArray* oauthParameters;
-	}
 
 - (id)initWithURL:(NSURL *)theURL consumer:(OAuthConsumer*)theConsumer token:(OAuthToken*)theToken realm:(NSString*)realm signerClass:(Class)theSignerClass;
 
@@ -32,13 +22,14 @@
 - (void)prepare;
 - (void)addParameter:(OAuthParameter*)aParameter;
 
-@property(nonatomic, retain) OAuthConsumer* consumer;
-@property(nonatomic, retain) OAuthToken*	token;
-@property(nonatomic, retain) NSString* realm;
-@property(nonatomic, retain) NSString* signature;
-@property(nonatomic, retain) NSString* nonce;
-@property(nonatomic, retain) NSString* timestamp;
-@property(nonatomic, assign) Class signerClass;
-@property(nonatomic, assign) NSMutableArray* oauthParameters;
+@property(retain) OAuthConsumer* consumer;
+@property(retain) OAuthToken*	token;
+@property(retain) NSString* realm;
+@property(retain) NSString* signature;
+@property(retain) NSString* nonce;
+@property(retain) NSString* timestamp;
+@property(assign) Class signerClass;
+@property(assign) NSMutableArray* oauthParameters;
+@property(assign,getter = isPrepared) BOOL prepared;
 
 @end

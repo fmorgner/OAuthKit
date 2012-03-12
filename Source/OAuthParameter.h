@@ -11,10 +11,6 @@
 
 
 @interface OAuthParameter : NSObject
-	{
-	NSString* key;
-	NSString* value;
-	}
 	
 - (id)initWithKey:(NSString*)theKey andValue:(NSString*)theValue;
 
