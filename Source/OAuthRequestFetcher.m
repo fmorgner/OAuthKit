@@ -7,7 +7,7 @@
 //
 
 #import "OAuthRequestFetcher.h"
-
+#import "OAuthRequest.h"
 
 @implementation OAuthRequestFetcher
 
@@ -41,6 +41,11 @@
 		NSException* exception = [NSException exceptionWithName:@"OAuthRequestFetcherRequestNilException" reason:@"The request must not be nil" userInfo:nil];
 		[exception raise];
 		return;
+		}
+	
+	if(![(OAuthRequest*)aRequest isPrepared])
+		{
+		[(OAuthRequest*)aRequest prepare];
 		}
 	
 	[self setCompletionHandler:block];
