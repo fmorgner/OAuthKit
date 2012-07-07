@@ -43,23 +43,17 @@
 	return self;	
 	}
 
-- (void)dealloc
-	{
-	[key release];
-	[secret release];
-	[super dealloc];
-	}
 
 #pragma mark - Convenience Allocators
 
 + (OAuthToken*)tokenWithKey:(NSString*)theKey secret:(NSString*)theSecret authorized:(BOOL)isAuthorized
 	{
-	return [[[OAuthToken alloc] initWithKey:theKey secret:theSecret authorized:isAuthorized] autorelease];
+	return [[OAuthToken alloc] initWithKey:theKey secret:theSecret authorized:isAuthorized];
 	}
 
 + (OAuthToken*)token
 	{
-	return [[[OAuthToken alloc] init] autorelease];
+	return [[OAuthToken alloc] init];
 	}
 
 #pragma mark - NSObject methods

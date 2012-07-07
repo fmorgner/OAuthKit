@@ -13,9 +13,9 @@
 
 - (void)fetchRequest:(NSURLRequest*)aRequest completionHandler:(void (^)(id fetchResult))block;
 
-@property(nonatomic,retain) NSURLRequest* request;
-@property(nonatomic,retain) NSURLConnection* connection;
-@property(nonatomic,retain) NSMutableData* receivedData;
+@property(nonatomic,strong) NSURLRequest* request;
+@property(nonatomic,strong) NSURLConnection* connection;
+@property(nonatomic,strong) NSMutableData* receivedData;
 @property(nonatomic,copy) void (^completionHandler)(id);
 
 

@@ -22,8 +22,8 @@
 - (NSString*)OAuthURLEncodedKeyValuePair;
 - (NSString*)concatenatedKeyValuePair;
 
-@property(nonatomic, retain) NSString* key;
-@property(nonatomic, retain) NSString* value;
+@property(nonatomic, strong) NSString* key;
+@property(nonatomic, strong) NSString* value;
 
 
 @end

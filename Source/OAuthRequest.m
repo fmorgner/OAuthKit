@@ -56,7 +56,7 @@
 		[self setConsumer:theConsumer];
 
 		(theToken == nil) ? [self setToken:[OAuthToken token]] : [self setToken:theToken];
-		(theRealm == nil) ? [self setRealm:[NSString stringWithString:@""]] : [self setRealm:theRealm];
+		(theRealm == nil) ? [self setRealm:@""] : [self setRealm:theRealm];
 
 		if([theSignerClass conformsToProtocol:@protocol(OAuthSigner)])
 			{
@@ -76,28 +76,18 @@
 	return self;
 	}
 
-- (void)dealloc
-	{
-	[consumer release];
-	[token release];
-	[nonce release];
-	[realm release];
-	[signature release];
-	[timestamp release];
-	[oauthParameters release];
-	[super dealloc];
-	}
+
 
 #pragma mark - Convenience Allocators
 
 + (OAuthRequest*)request
 	{
-	return [[[OAuthRequest alloc] init] autorelease];
+	return [[OAuthRequest alloc] init];
 	}
 
 + (OAuthRequest*)requestWithURL:(NSURL *)theURL consumer:(OAuthConsumer*)theConsumer token:(OAuthToken*)theToken realm:(NSString*)theRealm signerClass:(Class)theSignerClass
 	{
-	return [[[OAuthRequest alloc] initWithURL:theURL consumer:theConsumer token:theToken realm:theRealm signerClass:theSignerClass] autorelease];
+	return [[OAuthRequest alloc] initWithURL:theURL consumer:theConsumer token:theToken realm:theRealm signerClass:theSignerClass];
 	}
 
 
@@ -138,8 +128,7 @@
 	{
 	CFUUIDRef uuid = CFUUIDCreate(NULL);
 	CFStringRef uuidString = CFUUIDCreateString(NULL, uuid);
-	NSString* nonceString = (NSString*)uuidString;
-	CFMakeCollectable(uuidString);
+	NSString* nonceString = (NSString*)CFBridgingRelease(uuidString);
 	CFRelease(uuid);
 	
 	return nonceString;
@@ -147,7 +136,7 @@
 	
 - (NSString*)generateTimestamp
 	{
-	return [NSString stringWithFormat:@"%d", time(NULL)];
+	return [NSString stringWithFormat:@"%ld", time(NULL)];
 	}
 
 - (NSString*)signatureBaseString
@@ -164,7 +153,7 @@
 		[oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_token" andValue:token.key]];
 		}
 		
-	[oauthParameters sortUsingDescriptors:[NSArray arrayWithObject:[[[NSSortDescriptor alloc] initWithKey:@"key" ascending:YES] autorelease]]];
+	[oauthParameters sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"key" ascending:YES]]];
 	NSMutableArray* keyValuePairStrings = [NSMutableArray arrayWithCapacity:[oauthParameters count]];
 	
 	for(OAuthParameter* parameter in [self parameters])

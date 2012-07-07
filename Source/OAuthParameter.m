@@ -39,22 +39,16 @@
 	return self;
 	}	
 
-- (void)dealloc
-	{
-	[key release];
-	[value release];
-	[super dealloc];
-	}
 #pragma mark - Convenience Allocators
 
 + (OAuthParameter*)parameterWithKey:(NSString*)theKey andValue:(NSString*)theValue
 	{
-	return [[[OAuthParameter alloc] initWithKey:theKey andValue:theValue] autorelease];
+	return [[OAuthParameter alloc] initWithKey:theKey andValue:theValue];
 	}
 
 + (OAuthParameter*)parameter
 	{
-	return [[[OAuthParameter alloc] init] autorelease];
+	return [[OAuthParameter alloc] init];
 	}
 
 #pragma mark - Utility Methods

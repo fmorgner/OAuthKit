@@ -22,14 +22,14 @@
 - (void)prepare;
 - (void)addParameter:(OAuthParameter*)aParameter;
 
-@property(retain) OAuthConsumer* consumer;
-@property(retain) OAuthToken*	token;
-@property(retain) NSString* realm;
-@property(retain) NSString* signature;
-@property(retain) NSString* nonce;
-@property(retain) NSString* timestamp;
-@property(assign) Class signerClass;
-@property(assign) NSMutableArray* oauthParameters;
+@property(strong) OAuthConsumer* consumer;
+@property(strong) OAuthToken*	token;
+@property(strong) NSString* realm;
+@property(strong) NSString* signature;
+@property(strong) NSString* nonce;
+@property(strong) NSString* timestamp;
+@property(unsafe_unretained) Class signerClass;
+@property(weak) NSMutableArray* oauthParameters;
 @property(assign,getter = isPrepared) BOOL prepared;
 
 @end

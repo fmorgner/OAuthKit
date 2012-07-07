@@ -54,13 +54,6 @@
 	connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
 	}
 
-- (void)dealloc {
-    [receivedData release];
-		[request release];
-		[connection release];
-		[completionHandler dealloc];
-    [super dealloc];
-}
 
 #pragma mark - NSURLConnection delegate methods
 

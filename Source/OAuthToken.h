@@ -16,8 +16,8 @@
 + (OAuthToken*)token;
 + (OAuthToken*)tokenWithKey:(NSString*)theKey secret:(NSString*)theSecret authorized:(BOOL)isAuthorized;
 
-@property(nonatomic, retain) NSString* key;
-@property(nonatomic, retain) NSString* secret;
+@property(nonatomic, strong) NSString* key;
+@property(nonatomic, strong) NSString* secret;
 @property(nonatomic, getter = isAuthorized) BOOL authorized;
 
 @end

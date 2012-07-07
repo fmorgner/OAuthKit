@@ -21,7 +21,7 @@
 		}
 	else
 		{
-		parameterString = [[[NSString alloc] initWithData:[self HTTPBody] encoding:NSASCIIStringEncoding] autorelease];
+		parameterString = [[NSString alloc] initWithData:[self HTTPBody] encoding:NSASCIIStringEncoding];
 		}
 	
 	if((parameterString == nil) || [parameterString isEqualToString:@""])
