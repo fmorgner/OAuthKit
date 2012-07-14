@@ -25,18 +25,6 @@
 
 @implementation OAuthRequest
 
-#pragma mark - Properties
-
-@synthesize consumer;
-@synthesize token;
-@synthesize nonce;
-@synthesize realm;
-@synthesize signature;
-@synthesize timestamp;
-@synthesize signerClass;
-@synthesize oauthParameters;
-@synthesize prepared;
-
 #pragma mark - Object Lifecycle
 
 - (id)init
@@ -97,24 +85,24 @@
 	{
 	if(aParameter)
 		{
-		[oauthParameters addObject:aParameter];
+		[_oauthParameters addObject:aParameter];
 		}
 	}
 
 - (void)prepare
 	{
-	NSString* sigKey = [NSString stringWithFormat:@"%@&%@", consumer.secret, token.secret];
+	NSString* sigKey = [NSString stringWithFormat:@"%@&%@", _consumer.secret, _token.secret];
 	NSString* sigBase = [self signatureBaseString];
-	[self setSignature:[signerClass signClearText:sigBase withSecret:sigKey]];
+	[self setSignature:[_signerClass signClearText:sigBase withSecret:sigKey]];
 
-	NSMutableString* oauthHeaderString = [NSMutableString stringWithFormat:@"OAuth realm=\"%@\"", [realm stringUsingOAuthURLEncoding]];
+	NSMutableString* oauthHeaderString = [NSMutableString stringWithFormat:@"OAuth realm=\"%@\"", [_realm stringUsingOAuthURLEncoding]];
 	
-	for(OAuthParameter* parameter in oauthParameters)
+	for(OAuthParameter* parameter in _oauthParameters)
 		{
 		[oauthHeaderString appendFormat:@", %@=\"%@\"", [[parameter key] stringUsingOAuthURLEncoding], [[parameter value] stringUsingOAuthURLEncoding]];
 		}
 
-	[oauthHeaderString appendFormat:@", oauth_signature=\"%@\"", [signature stringUsingOAuthURLEncoding]];
+	[oauthHeaderString appendFormat:@", oauth_signature=\"%@\"", [_signature stringUsingOAuthURLEncoding]];
 
 	[self setValue:oauthHeaderString forHTTPHeaderField:@"Authorization"];
 	[self setPrepared:YES];
@@ -141,27 +129,29 @@
 
 - (NSString*)signatureBaseString
 	{
-	[oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_callback" andValue:@"oob"]];
-	[oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_consumer_key" andValue:consumer.key]];
-	[oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_signature_method" andValue:[signerClass signatureType]]];
-	[oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_timestamp" andValue:timestamp]];
-	[oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_nonce" andValue:nonce]];
-	[oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_version" andValue:@"1.0"]];
+	[_oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_callback" andValue:@"oob"]];
+	[_oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_consumer_key" andValue:_consumer.key]];
+	[_oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_signature_method" andValue:[_signerClass signatureType]]];
+	[_oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_timestamp" andValue:_timestamp]];
+	[_oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_nonce" andValue:_nonce]];
+	[_oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_version" andValue:@"1.0"]];
 	
-	if(![token.key isEqualToString:@""])
+	if(![_token.key isEqualToString:@""])
 		{
-		[oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_token" andValue:token.key]];
+		[_oauthParameters addObject:[OAuthParameter parameterWithKey:@"oauth_token" andValue:_token.key]];
 		}
-		
-	[oauthParameters sortUsingDescriptors:@[[[NSSortDescriptor alloc] initWithKey:@"key" ascending:YES]]];
-	NSMutableArray* keyValuePairStrings = [NSMutableArray arrayWithCapacity:[oauthParameters count]];
+	
+	NSSortDescriptor* desc = [[NSSortDescriptor alloc] initWithKey:@"key" ascending:YES];
+	
+	[_oauthParameters sortUsingDescriptors:@[desc]];
+	NSMutableArray* keyValuePairStrings = [NSMutableArray arrayWithCapacity:[_oauthParameters count]];
 	
 	for(OAuthParameter* parameter in [self parameters])
 		{
 		[keyValuePairStrings addObject:[parameter concatenatedKeyValuePair]];
 		}
 
-	for(OAuthParameter* parameter in oauthParameters)
+	for(OAuthParameter* parameter in _oauthParameters)
 		{
 		[keyValuePairStrings addObject:[parameter concatenatedKeyValuePair]];
 		}

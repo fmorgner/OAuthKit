@@ -29,7 +29,7 @@
 @property(strong) NSString* nonce;
 @property(strong) NSString* timestamp;
 @property(unsafe_unretained) Class signerClass;
-@property(weak) NSMutableArray* oauthParameters;
+@property(strong) NSMutableArray* oauthParameters;
 @property(assign,getter = isPrepared) BOOL prepared;
 
 @end
