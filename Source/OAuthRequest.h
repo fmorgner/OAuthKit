@@ -17,10 +17,12 @@
 - (id)initWithURL:(NSURL *)theURL consumer:(OAuthConsumer*)theConsumer token:(OAuthToken*)theToken realm:(NSString*)realm signerClass:(Class)theSignerClass;
 
 + (OAuthRequest*)requestWithURL:(NSURL *)theURL consumer:(OAuthConsumer*)theConsumer token:(OAuthToken*)theToken realm:(NSString*)theRealm signerClass:(Class)theSignerClass;
++ (OAuthRequest*)requestWithURL:(NSURL *)theURL parameters:(NSArray*)theParameters consumer:(OAuthConsumer*)theConsumer token:(OAuthToken*)theToken realm:(NSString*)theRealm signerClass:(Class)theSignerClass;
 + (OAuthRequest*)request;
 
 - (void)prepare;
 - (void)addParameter:(OAuthParameter*)aParameter;
+- (void)addParameters:(NSArray*)theParameters;
 
 @property(strong) OAuthConsumer* consumer;
 @property(strong) OAuthToken*	token;

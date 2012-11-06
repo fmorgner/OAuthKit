@@ -64,8 +64,6 @@
 	return self;
 	}
 
-
-
 #pragma mark - Convenience Allocators
 
 + (OAuthRequest*)request
@@ -78,6 +76,17 @@
 	return [[OAuthRequest alloc] initWithURL:theURL consumer:theConsumer token:theToken realm:theRealm signerClass:theSignerClass];
 	}
 
++ (OAuthRequest*)requestWithURL:(NSURL *)theURL parameters:(NSArray*)theParameters consumer:(OAuthConsumer*)theConsumer token:(OAuthToken*)theToken realm:(NSString*)theRealm signerClass:(Class)theSignerClass
+  {
+	OAuthRequest* theRequest = [OAuthRequest requestWithURL:theURL consumer:theConsumer token:theToken realm:theRealm signerClass:theSignerClass];
+	[theParameters enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+		if([obj isKindOfClass:[OAuthParameter class]])
+			{
+			[theRequest addParameter:obj];
+			}
+	}];
+	return theRequest;
+	}
 
 #pragma mark - Utility Methods
 
@@ -86,6 +95,14 @@
 	if(aParameter)
 		{
 		[_oauthParameters addObject:aParameter];
+		}
+	}
+
+- (void)addParameters:(NSArray*)theParameters
+	{
+	if(theParameters)
+		{
+		[_oauthParameters addObjectsFromArray:theParameters];
 		}
 	}
 
