@@ -64,11 +64,21 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 	{
-	completionHandler(receivedData);
+	dispatch_retain(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+	
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		completionHandler(receivedData);
+		dispatch_release(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+	});
 	}
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 	{
-	completionHandler(error);
+	dispatch_retain(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+	
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		completionHandler(error);
+		dispatch_release(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0));
+	});
 	}
 @end
